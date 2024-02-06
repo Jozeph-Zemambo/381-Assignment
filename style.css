@@ -12,8 +12,8 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    /* justify-content: space-between; */
     color: #333;
     background-color: #6c757d;
     padding: 10px;
