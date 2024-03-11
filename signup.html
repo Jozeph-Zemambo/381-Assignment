@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Page</title>
+    <style>
+    main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust this as needed */
+    }
+
+    form {
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    }
+
+    label {
+    display: block;
+    margin: 10px 0;
+    }
+
+    input[type="text"], input[type="password"], input[type="email"] {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    }
+    input[type="submit"] {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+    border: none;
+    color: white;
+    cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+    }
+
+    #messageBox {
+    border: 2px solid black;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+}
+
+
+
+    </style>
+    
+    
+        
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo">
+        <h1>BUTT N' DAT</h1>
+    </header>
+    <div id="nav">
+        <nav id="navigation">
+            <ul id="nav-bar">
+                <li><a href="login.html">Already have an account?</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="product.html">View Our Products</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+    <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter username" pattern="[A-Za-z][A-Za-z0-9-_]{2,19}"  required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+\[\]{}|;:'\&quot;,.&lt;&gt;?/`~])[A-Za-z\d!@#$%^&*()\-_=+\[\]{}|;:'\&quot;,.&lt;&gt;?/`~]{8,}$"  required>
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password"  required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|io)$" required>
+        <input type="submit" value="Signup">
+    </form>
+    
+    
+    <div id="messageBox" style="display: none;">
+        <p id="message"></p>
+    </div>
+    <script>
+        function checkInputs() {
+    var username = document.getElementById('username');
+    var email = document.getElementById('email');
+    var password = document.getElementById('password');
+    var confirm_password = document.getElementById('confirm_password');
+    var messageBox = document.getElementById("messageBox");
+    var message = document.getElementById("message");
+
+    message.textContent = ""; // Clear the previous message
+
+    // Username validation
+    var usernamePattern = /^[A-Za-z][A-Za-z0-9-_]{2,19}$/;
+    if (!usernamePattern.test(username.value)) {
+        message.textContent += "Username is invalid.\n";
+    }
+
+    // Email validation
+    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|io)$/;
+    if (!emailPattern.test(email.value)) {
+        message.textContent += "Email is invalid.\n";
+    }
+
+    // Password validation
+    var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+\[\]{}|;:'\",.<>?/`~])[A-Za-z\d!@#$%^&*()\-_=+\[\]{}|;:'\",.<>?/`~]{8,}$/;
+    if (!passwordPattern.test(password.value)) {
+        message.textContent += "Password is required and must meet the complexity requirements.\n";
+    }
+
+    // Confirm password validation
+    if (password.value !== confirm_password.value) {
+        message.textContent += "Passwords do not match.\n";
+    }
+
+    if (message.textContent) {
+        messageBox.style.display = "block"; // Show the message box
+        messageBox.style.color = "red";
+    } else {
+        message.textContent = "Signup successful!";
+        messageBox.style.display = "block"; // Show the message box
+        messageBox.style.color = "green";
+    }
+}
+
+document.getElementById("myForm").addEventListener("submit", function(event){
+    event.preventDefault();
+    checkInputs();
+});
+
+
+        
+    </script>
+    </main>
+    <footer>
+        © 2024 BUTT N' DATT 
+    </footer>
+</body>
+</html>
