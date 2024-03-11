@@ -11,6 +11,7 @@ Description : Login File
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="login.js"></script>
     <title>Website</title>
 </head>
 <body>
@@ -18,33 +19,34 @@ Description : Login File
     <img src="logo.png" id="logo">
     <h1 class="heading">Butt N' DAT</h1> 
 </header>
+<main id="main">
+    <div id="nav">
+        <nav id="navigation">
+            <ul id="bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="product.html">View Our Products</a></li>
+                <li><a href="login.html">Login or Register</a></li>
+            </ul>
+        </nav>
+    </div>
 
-<div id="nav">
-    <nav id="navigation">
-        <ul id="nav-bar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-            <li><a href="product.html">View Our Products</a></li>
-            <li><a href="login.html">Login or Register</a></li>
-        </ul>
-    </nav>
-</div>
-
-<form>
-    <div class="input-group">
-        <p class="username", style="display: inline;">Username</p>
-        <input type="text" placeholder="Enter your Username here!" class="username">
-    </div>
-    
-    <div class="input-group">
-        <p class="password", style="display: inline;">Password</p>
-        <input type="password" placeholder="Enter your Password here!" class="password">
-    </div>
-    <div>
-    <button> login </button>
-    <button> Register </button>
-    </div>
-</form>
+    <form class="form">
+        <div class="input-group">
+            <p class="username">Username</p>
+            <input type="text" placeholder="Enter your Username here!" class="username" id="name">
+        </div>
+        
+        <div class="input-group" id="input2">
+            <p class="password">Password</p>
+            <input type="password" placeholder="Enter your Password here!" class="password" id="pass">
+            <button type="button" id="login"> login </button>
+        </div>
+        <div class="sign">
+        <p>Don't have an account? <a id="signup" href="index.html">Sign up here</a></p>
+        
+        </div>
+    </form>
 
 </main>
 <footer>
