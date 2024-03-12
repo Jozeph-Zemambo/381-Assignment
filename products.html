@@ -12,7 +12,7 @@ Description : Product File
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    
+    <script src="products.js"></script>
 
     <title>BUTT N' DAT - Products</title>
 </head>
@@ -44,13 +44,13 @@ Description : Product File
                     <img src="product1.jpg" alt="Product 1" width="350">
                     <h2>NutsCracker</h2>
                     <p class="price">29.99</p>
-                    <button>Add to Cart</button>
+                    <button class="atcb" data-price="29.99" data-name="NutsCracker">Add to Cart</button>
                 </div>    
                 <div class="product">
                     <img src="product2.jpg" alt="Product 2" width="350">
                     <h2>No more Mr. Nice Guy</h2>
                     <p class="price">$24.99</p>
-                    <button>Add to Cart</button>
+                    <button class="atcb" data-price="24.99" data-name="No more Mr. Nice Guy">Add to Cart</button>
                 </div>
             </div>
 
@@ -60,13 +60,13 @@ Description : Product File
                     <img src="product3.jpg" alt="Product 3" width="350">
                     <h2>Cupid</h2>
                     <p class="price">$33.99</p>
-                    <button>Add to Cart</button>
+                    <button class="atcb" data-price="33.99" data-name="Cupid">Add to Cart</button>
                 </div>
                 <div class="product">
                     <img src="product4.jpg" alt="Product 4" width="350">
                     <h2>Party Animals</h2>
                     <p class="price">$49.99</p>
-                    <button>Add to Cart</button>
+                    <button class="atcb" data-price="49.99" data-name="Party Animals">Add to Cart</button>
                 </div>
             </div>
             <!-- Display Product 5 and Product 6 in the same line -->
@@ -75,13 +75,13 @@ Description : Product File
                     <img src="product5.jpg" alt="Product 5" width="350">
                     <h2>brokie</h2>
                     <p class="price">$12.99</p>
-                    <button>Add to Cart</button>
+                    <button class="atcb" data-price="12.99" data-name="brokie">Add to Cart</button>
                 </div>    
                 <div class="product">
                     <img src="product6.jpg" alt="Product 6" width="350">
                     <h2>BlissBlaster</h2>
                     <p class="price">$21.99</p>
-                    <button>Add to Cart</button>
+                    <button class="atcb" data-price="21.99" data-name="BlissBlaster">Add to Cart</button>
                 </div>
             </div>
 
@@ -91,20 +91,23 @@ Description : Product File
                     <img src="product7.jpg" alt="Product 7" width="350">
                     <h2>Noir</h2>
                     <p class="price">$39.99</p>
-                    <button>Add to Cart</button>
+                    <button class="atcb" data-price="39.99" data-name="Noir">Add to Cart</button>
                 </div>
                 <div class="product">
                     <img src="product8.jpg" alt="Product 8" width="350">
                     <h2>Maxi</h2>
                     <p class="price">$0.99</p>
-                    <button>Add to Cart</button>
+                    <button class="atcb" data-price="0.99" data-name="broMaxikie">Add to Cart</button>
                 </div>
             </div>
             <!-- Similarly create Product 5-8 -->
+            <h2>Shopping Cart</h2>
+            <div id="cart">
+            </div>
         </section>
-        <div id="cart"></div>
+
     </main>
-    <script src="products.js"></script>
+    
 
     <footer class="footer">
         <p>&copy; 2024 BUTT N' DAT. All rights reserved.</p>

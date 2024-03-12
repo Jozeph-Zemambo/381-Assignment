@@ -250,3 +250,12 @@ header {
 .contact-method ul li a:hover {
     color: #007BFF; 
 }
+
+
+#cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Add this line */
+    width: 100%; /* Add this line */
+}
