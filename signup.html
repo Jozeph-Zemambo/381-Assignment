@@ -3,6 +3,8 @@
 <head>
     <title>Signup Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="signup.js"></script>
+
     
     <!-- <style>
         main {
@@ -71,9 +73,11 @@
     <div id="nav">
         <nav id="navigation">
             <ul id="bar">
-                <li><a href="login.html">Already have an account?</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
                 <li><a href="contact.html">Contact us</a></li>
-                <li><a href="product.html">View Our Products</a></li>
+                <li><a href="products.html">View Our Products</a></li>
+                
             </ul>
         </nav>
     </div>
@@ -94,58 +98,7 @@
     <div id="messageBox" style="display: none;">
         <p id="message"></p>
     </div>
-    <script>
-        function checkInputs() {
-    var username = document.getElementById('username');
-    var email = document.getElementById('email');
-    var password = document.getElementById('password');
-    var confirm_password = document.getElementById('confirm_password');
-    var messageBox = document.getElementById("messageBox");
-    var message = document.getElementById("message");
-
-    message.textContent = ""; // Clear the previous message
-
-    // Username validation
-    var usernamePattern = /^[A-Za-z][A-Za-z0-9-_]{2,19}$/;
-    if (!usernamePattern.test(username.value)) {
-        message.textContent += "Username is invalid.\n";
-    }
-
-    // Email validation
-    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net|io)$/;
-    if (!emailPattern.test(email.value)) {
-        message.textContent += "Email is invalid.\n";
-    }
-
-    // Password validation
-    var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+\[\]{}|;:'\",.<>?/`~])[A-Za-z\d!@#$%^&*()\-_=+\[\]{}|;:'\",.<>?/`~]{8,}$/;
-    if (!passwordPattern.test(password.value)) {
-        message.textContent += "Password is required and must meet the complexity requirements.\n";
-    }
-
-    // Confirm password validation
-    if (password.value !== confirm_password.value) {
-        message.textContent += "Passwords do not match.\n";
-    }
-
-    if (message.textContent) {
-        messageBox.style.display = "block"; // Show the message box
-        messageBox.style.color = "red";
-    } else {
-        message.textContent = "Signup successful!";
-        messageBox.style.display = "block"; // Show the message box
-        messageBox.style.color = "green";
-    }
-}
-
-document.getElementById("myForm").addEventListener("submit", function(event){
-    event.preventDefault();
-    checkInputs();
-});
-
-
-        
-    </script>
+    
     </main>
     <footer>
         <p class="footer">All rights reserved &copy;BUTT N' DAT</p>
