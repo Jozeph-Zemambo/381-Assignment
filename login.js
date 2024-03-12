@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', ()=> {
             }
 
             if (correct) {
-                tex.textContent = "Login successful";
+                tex.textContent = "Login successful!";
             } else {
-                tex.textContent = "Login failed";
+                tex.textContent = "Incorrect Username or Password. Please try again!";
             }
 
             
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', ()=> {
         var newdiv = document.createElement("div");
         newdiv.id = "Messagebox";
 
-        newdiv.style.border = "2px";
+        newdiv.style.border = "2px solid black";
         newdiv.style.backgroundColor = "#f9f9f9";
         newdiv.style.padding = "10px";
         newdiv.style.margin ="20px";
