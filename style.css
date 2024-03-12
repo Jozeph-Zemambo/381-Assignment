@@ -193,6 +193,13 @@ header {
     text-decoration: underline;
 }
 
+#messageBox {
+    border: 2px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+}
+
 
 .field {
     display: block;
