@@ -203,3 +203,43 @@ header {
     border-radius: 5px;
     box-sizing: border-box; /* Ensure padding and border are included in width */
 }
+
+.contact-info {
+	background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Contact Method Styles */
+.contact-method {
+    background-color: #ddd;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+}
+
+.contact-info h2{
+    padding-bottom: 5px;
+}
+
+.contact-method h3{
+    padding: 20px 0 5px 0;
+}
+
+/* Social Media Links Styles */
+
+.contact-method ul li a {
+    color: light blue; 
+}
+
+.contact-method ul{
+    padding-left: 40px;
+}
+
+/* Social Media Links Hover Effect */
+.contact-method ul li a:hover {
+    color: #007BFF; 
+}
