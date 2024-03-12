@@ -79,6 +79,18 @@ header {
     color: white;
 }
 
+/* Product List Section Styles */
+.product-list {
+	background-color: #ddd;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
 /* Product Styling */
 .product {
     background-color: #f9f9f9;
