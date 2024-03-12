@@ -133,7 +133,6 @@ header {
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
-    width: 100%;
 }
 
 #name {
@@ -180,4 +179,15 @@ header {
 
 #signup:hover {
     text-decoration: underline;
+}
+
+
+.field {
+    display: block;
+    margin: 10px;
+    border: 1.5px solid black;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
 }
